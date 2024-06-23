@@ -1,0 +1,23 @@
+def breakingRecords(n,score):
+
+  max_count = 0 #1+1
+  min_count = 0 #1+1+1+1
+  temp = score[0]
+  a = temp
+  b = temp
+
+  for i in score:
+    if i > a:
+      max_count+=1
+      a = i
+    if i<b:
+      min_count+=1
+      b=i
+  print(max_count,min_count)
+
+
+
+scores = [10, 5, 20, 20, 4, 5, 2, 25, 1]
+n=len(scores)
+result = breakingRecords(n, scores)
+#print(result)
